@@ -1,0 +1,34 @@
+@import "../variavles";
+/*
+---
+name : .c-container
+category :
+  - component
+  - component/container
+---
+Content container
+
+```html
+<div class="c-container">
+...
+</div>
+```
+ */
+.c-container {
+  @include make-container();
+  @include make-container-max-widths();
+  //width: $container-width-sm;
+  //@include media-breakpoint-up(sm) {
+  //  //width: $container-width-sm;
+  //}
+  //@include media-breakpoint-up(md) {
+  //  //width: $container-width-md;
+  //  //margin: 0 auto;
+  //}
+  //@include media-breakpoint-up(lg) {
+  //  //width: $container-width-lg;
+  //}
+  //@include media-breakpoint-up(xl) {
+  //  //width: $container-width-xl;
+  //}
+}

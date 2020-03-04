@@ -1,0 +1,108 @@
+/*
+---
+name : .c-col
+category :
+  - component
+  - component/col
+---
+Columns
+
+```html
+<div class="c-row">
+  <div class="c-col">.c-col</div>
+  <div class="c-col">.c-col</div>
+  <div class="c-col">.c-col</div>
+</div>
+```
+ */
+@include make-grid-columns();
+
+/*
+---
+name : .c-col-xs-**
+category :
+  - component
+  - component/col
+---
+Columns for extra small device
+
+```html
+<div class="c-row">
+  <div class="c-col-xs-2">.c-col-xs-2</div>
+  <div class="c-col-xs-5">.c-col-xs-5</div>
+  <div class="c-col-xs-5">.c-col-xs-5</div>
+</div>
+```
+ */
+
+/*
+---
+name : .c-col-sm-**
+category :
+  - component
+  - component/col
+---
+Columns for small device
+
+```html
+<div class="c-row">
+  <div class="c-col-sm-2">.c-col-sm-2</div>
+  <div class="c-col-sm-5">.c-col-sm-5</div>
+  <div class="c-col-sm-5">.c-col-sm-5</div>
+</div>
+```
+ */
+
+/*
+---
+name : .c-col-md-**
+category :
+  - component
+  - component/col
+---
+Columns for medium device
+
+```html
+<div class="c-row">
+  <div class="c-col-md-2">.c-col-md-2</div>
+  <div class="c-col-md-5">.c-col-md-5</div>
+  <div class="c-col-md-5">.c-col-md-5</div>
+</div>
+```
+ */
+
+/*
+---
+name : .c-col-lg-**
+category :
+  - component
+  - component/col
+---
+Columns for large device
+
+```html
+<div class="c-row">
+  <div class="c-col-lg-2">.c-col-lg-2</div>
+  <div class="c-col-lg-5">.c-col-lg-5</div>
+  <div class="c-col-lg-5">.c-col-lg-5</div>
+</div>
+```
+ */
+
+/*
+---
+name : .c-col-xl-**
+category :
+  - component
+  - component/col
+---
+Columns for extra large device
+
+```html
+<div class="c-row">
+  <div class="c-col-xl-2">.c-col-xl-2</div>
+  <div class="c-col-xl-5">.c-col-xl-5</div>
+  <div class="c-col-xl-5">.c-col-xl-5</div>
+</div>
+```
+ */

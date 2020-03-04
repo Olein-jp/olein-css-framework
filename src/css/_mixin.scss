@@ -1,0 +1,154 @@
+////
+/// Mixins
+///
+/// @author Koji Kuno <info@olein-design.com>
+////
+
+@mixin centered-image( $height: 400px ) {
+  position: relative;
+  overflow: hidden;
+  height: $height;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    width: 100%;
+    height: auto;
+  }
+}
+
+///
+//  Make grid columns
+///
+@mixin make-grid-columns(
+  $columns: $grid-columns,
+  $gutter: $grid-gutter-width,
+  $breakpoints: $grid-breakpoints
+) {
+  %grid-column {
+    position: relative;
+    width: 100%;
+    padding-right: $gutter / 2;
+    padding-left: $gutter / 2;
+  }
+
+  .c-col {
+    flex-basis: 0;
+    flex-grow: 1;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  @each $breakpoint in map-keys( $breakpoints ) {
+
+    @for $i from 1 through $columns {
+      .c-col-#{ $breakpoint }-#{ $i } {
+        @extend %grid-column;
+      }
+    }
+    .c-col-#{ $breakpoint } {
+      @extend %grid-column;
+    }
+
+    @include media-breakpoint-up( $breakpoint, $breakpoints ) {
+      .c-col-#{ $breakpoint } {
+        flex-basis: 0;
+        flex-grow: 1;
+        min-width: 0;
+        max-width: 100%;
+      }
+
+      @for $i from 1 through $columns {
+        .c-col-#{ $breakpoint }-#{ $i } {
+          @include make-col( $i, $columns );
+        }
+      }
+
+      //@for $i from 0 through ( $columns - 1 ) {
+      //  @if not ( $breakpoint == "xs" and $i == 0 ) {
+      //    .c-col-offset-#{ $breakpoint }-#{$i} {
+      //      @include make-col-offset( $i, $columns );
+      //    }
+      //  }
+      //}
+    }
+
+  }
+}
+
+///
+// Media query break point up
+///
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+///
+//
+///
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+///
+// Make row
+///
+@mixin make-row( $gutter: $grid-gutter-width ) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -$gutter / 2;
+  margin-left: -$gutter / 2;
+}
+
+///
+// make column
+///
+@mixin make-col( $size, $columns: $grid-columns ) {
+  flex: 0 0 percentage( $size / $columns );
+  max-width: percentage( $size / $columns );
+}
+
+///
+// make offset column
+///
+@mixin make-col-offset($size, $columns: $grid-columns) {
+  $num: $size / $columns;
+  margin-left: if($num == 0, 0, percentage($num));
+}
+
+///
+// Make container
+///
+@mixin make-container( $padding-x: $container-padding-x ) {
+  width: 100%;
+  padding-right: $padding-x;
+  padding-left: $padding-x;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+///
+// Set maximum width fo the container, each breakpoint
+///
+@mixin make-container-max-widths( $max-widths: $container-max-widths, $breakpoints: $grid-breakpoints ) {
+  @each $breakpoint, $container-max-width in $max-widths {
+    @include media-breakpoint-up( $breakpoint, $breakpoints ) {
+      max-width: $container-max-width;
+    }
+  }
+}

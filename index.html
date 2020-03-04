@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="dist/css/olein-css-framework.css">
+	<title>Olein CSS Framework</title>
+</head>
+<body>
+<style>
+	div[class*="c-col"] {
+		background-color: #f4f4f4;
+		border: 1px solid #ccc;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		text-align: center;
+	}
+	.c-row {
+		margin-bottom: 30px;
+	}
+</style>
+<div id="site">
+	<header class="l-header">
+
+	</header>
+
+	<main class="c-container">
+		<article>
+			<section>
+				<h2>Equal width</h2>
+				<div class="c-row">
+					<div class="c-col">
+						column
+					</div>
+					<div class="c-col">
+						column
+					</div>
+					<div class="c-col">
+						column
+					</div>
+				</div>
+			</section>
+			<section>
+				<h3>.c-col_sm-*</h3>
+				<div class="c-row">
+					<div class="c-col-sm-4">.c-col-sm-4</div>
+					<div class="c-col-sm-8">.c-col-sm-8</div>
+				</div>
+				<div class="c-row">
+					<div class="c-col-sm-6">.c-col-sm-6</div>
+					<div class="c-col-sm-6">.c-col-sm-6</div>
+				</div>
+			</section>
+		</article>
+	</main>
+
+</div>
+</body>
+</html>

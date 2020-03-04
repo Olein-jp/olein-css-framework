@@ -1,0 +1,26 @@
+/*
+---
+name : .c-row
+category :
+  - component
+  - component/row
+---
+Row container box
+
+```html
+<div class="c-row">
+...
+</div>
+```
+ */
+.c-row {
+  @include make-row();
+  .no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    > [class*="c-col_"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}

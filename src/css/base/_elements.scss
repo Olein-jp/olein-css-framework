@@ -1,0 +1,58 @@
+@import "../variavles";
+////
+/// Default elements.
+///
+/// @author Koji Kuno <info@olein-design.com>
+////
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: $line-height-base;
+  color: $body-color;
+  text-align: $body-text-align;
+  background-color: $body-bg;
+}
+
+///
+// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+///
+[tabindex="-1"]:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+///
+// Content grouping
+///
+hr {
+  margin: $spacer 0;
+  color: $gray-800;
+  background-color: currentColor;
+  border: 0;
+  opacity: .25;
+  &:not([size]) {
+    height: 1px;
+  }
+}
+
+///
+// Typography
+///
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+  }
+}

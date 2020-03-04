@@ -1,0 +1,164 @@
+////
+/// Variables.
+///
+/// @author Koji Kuno <info@olein-design.com>
+////
+
+///
+// Default colors.
+///
+$white    : #fff    !default;
+$gray-100 : #f8f9fa !default;
+$gray-200 : #e9ecef !default;
+$gray-300 : #dee2e6 !default;
+$gray-400 : #ced4da !default;
+$gray-500 : #adb5bd !default;
+$gray-600 : #6c757d !default;
+$gray-700 : #495057 !default;
+$gray-800 : #343a40 !default;
+$gray-900 : #212529 !default;
+$black    : #000    !default;
+
+$blue   : #007bff !default;
+$indigo : #6610f2 !default;
+$purple : #6f42c1 !default;
+$pink   : #e83e8c !default;
+$red    : #dc3545 !default;
+$orange : #fd7e14 !default;
+$yellow : #ffc107 !default;
+$green  : #28a745 !default;
+$teal   : #20c997 !default;
+$cyan   : #17a2b8 !default;
+
+$sns-color_facebook  : #3B5998;
+$sns-color_twitter   : #55acee;
+$sns-color_instagram : #D93177;
+$sns-color_line      : #00b900;
+$sns-color_youtube   : #cd201f;
+$sns-color_rss       : #ee802f;
+$sns-color_wordpress : #21759b;
+$sns-color_github    : #333333;
+$sns-color_hatena    : #008fde;
+
+///
+// Common colors
+///
+//$text-color   : #0A0A0A;
+//$link-color   : $blue;
+//$link-color_hover: $indigo;
+
+///
+// Spacer
+///
+$spacer: 15px !default;
+
+///
+// body
+///
+$body-bg: $white !default;
+$body-color: $gray-900 !default;
+$body-text-align: null !default;
+
+///
+// Links
+///
+$link-color   : $blue !default;
+$link-decoration: none !default;
+$link-hover-color: darken( $link-color, 15% ) !default;
+$link-hover-decoration: underline !default;
+
+///
+// Define break points
+///
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+///
+// Define container width
+///
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+///
+// Grid date
+///
+$grid-columns: 12 !default;
+$grid-gutter-width: 30px !default;
+
+///
+// Container padding
+///
+$container-padding-x: $grid-gutter-width / 2 !default;
+
+
+///
+// Typography
+///
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Sans", "Noto Sans CJK JP", "Original Yu Gothic", "Yu Gothic", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Sans Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1rem !default;
+$font-size-large: $font-size-base * 1.25 !default;
+$font-size-small: $font-size-base * 0.875 !default;
+
+$line-height-base: 1.5 !default;
+$line-height-large: 2 !default;
+$line-height-small: 1.25 !default;
+
+
+/////
+//// Define block colors for in editor.
+/////
+//@function block-colors() {
+//
+//  @return (
+//          white     : #ffffff,
+//          black     : #000000,
+//          charcoal  : #282c34,
+//          regent    : #8c97a7,
+//          husk      : #b9a364,
+//          red-stage : #b15330
+//  );
+//}
+//
+/////
+//// Return a single block color value by name
+/////
+//@function block-color( $name ) {
+//
+//  @return map-get( block-colors(), $name );
+//
+//}
+//
+/////
+//// Define font sizes in editor.
+/////
+//@function editor-font-sizes() {
+//
+//  @return (
+//          small   : 12px,
+//          regular : 16px,
+//          large   : 36px,
+//          larger  : 48px
+//  );
+//
+//}
+//
+/////
+//// Return a single editor font size value by name
+/////
+//@function editor-font-size( $name ) {
+//
+//  @return map_get( editor-font-sizes(), $name );
+//
+//}
